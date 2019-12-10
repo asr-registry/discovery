@@ -9,29 +9,29 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class HazelcastConfig{
-//    @Bean
-//    public Config hazelCastConfig(){
-//        Config config = new Config();
-//        config.setInstanceName("hazelcast-instance")
-//                .addMapConfig(
-//                        new MapConfig()
-//                                .setName("configuration")
-//                                .setMaxSizeConfig(new MaxSizeConfig(200, MaxSizeConfig.MaxSizePolicy.FREE_HEAP_SIZE))
-//                                .setEvictionPolicy(EvictionPolicy.LRU)
-//                                .setTimeToLiveSeconds(-1));
-//        return config;
-//    }
-
     @Bean
-    public Config hazelcastConfig() {
+    public Config hazelCastConfig(){
         Config config = new Config();
-        config.getNetworkConfig().getJoin().getMulticastConfig().setEnabled(false);
-        config.getNetworkConfig().getJoin().getEurekaConfig()
-                .setEnabled(true)
-                .setProperty("self-registration", "true")
-                .setProperty("namespace", "hazelcast");
+        config.setInstanceName("hazelcast-instance")
+                .addMapConfig(
+                        new MapConfig()
+                                .setName("configuration")
+                                .setMaxSizeConfig(new MaxSizeConfig(200, MaxSizeConfig.MaxSizePolicy.FREE_HEAP_SIZE))
+                                .setEvictionPolicy(EvictionPolicy.LRU)
+                                .setTimeToLiveSeconds(-1));
         return config;
     }
+
+//    @Bean
+//    public Config hazelcastConfig() {
+//        Config config = new Config();
+//        config.getNetworkConfig().getJoin().getMulticastConfig().setEnabled(false);
+//        config.getNetworkConfig().getJoin().getEurekaConfig()
+//                .setEnabled(true)
+//                .setProperty("self-registration", "true")
+//                .setProperty("namespace", "hazelcast");
+//        return config;
+//    }
 
 
 //    @Bean
