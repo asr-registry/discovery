@@ -35,6 +35,14 @@
 			<artifactId>hazelcast-spring</artifactId>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/com.hazelcast/hazelcast-eureka-one -->
+		<dependency>
+			<groupId>com.hazelcast</groupId>
+			<artifactId>hazelcast-eureka-one</artifactId>
+			<version>1.1.2</version>
+		</dependency>
+
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
