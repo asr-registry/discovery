@@ -5,5 +5,5 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @EnableEurekaServer
-public class EurekaServerConfig {
+public class EurekaServerConfiguration {
 }

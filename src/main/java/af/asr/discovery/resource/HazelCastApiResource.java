@@ -12,11 +12,11 @@ import java.util.Map;
 @RequestMapping("/api/hazelcast")
 public class HazelCastApiResource {
 
-    private final Logger logger = LoggerFactory.getLogger(HazelcastController.class);
+    private final Logger logger = LoggerFactory.getLogger(HazelCastApiResource.class);
     private final HazelcastInstance hazelcastInstance;
 
     @Autowired
-    HazelcastController(HazelcastInstance hazelcastInstance) {
+    HazelCastApiResource(HazelcastInstance hazelcastInstance) {
         this.hazelcastInstance = hazelcastInstance;
     }
 
